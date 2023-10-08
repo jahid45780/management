@@ -18,6 +18,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ServicePrice from './Components/PrivateRoute/ServicePrice';
 import Contact from './Components/PrivateRoute/Contact';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,11 +36,11 @@ const router = createBrowserRouter([
       },
       {
          path:'/service',
-         element:  <ServicePrice></ServicePrice> 
+         element:   <PrivateRoute> <ServicePrice></ServicePrice> </PrivateRoute> 
       },
       {
         path:'/contact',
-        element:  <Contact></Contact> 
+        element:  <PrivateRoute>  <Contact></Contact>  </PrivateRoute>
       },
       {
         path:'/about',
