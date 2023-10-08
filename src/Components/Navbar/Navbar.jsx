@@ -1,9 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import {  Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProviders";
 
 
 
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext)
+    const handleSingOut =()=>{
+        logOut()
+        .then()
+        .catch()
+    }
 
     const links = <>
 
@@ -30,7 +39,7 @@ const Navbar = () => {
                     isPending ? "pending" : isActive ? " text-red-600 underline" : ""
                 }
             >
-               <span className=" text-2xl" > About Us</span>
+                <span className=" text-2xl" > About Us</span>
             </NavLink>
 
         </li>
@@ -45,10 +54,24 @@ const Navbar = () => {
                     isPending ? "pending" : isActive ? "  text-red-600 underline" : ""
                 }
             >
-              <span className=" text-2xl" >Blog</span>
+                <span className=" text-2xl" >Blog</span>
             </NavLink>
 
         </li>
+
+        <li>
+
+            <NavLink
+                to="/login"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "  text-red-600 underline" : ""
+                }
+            >
+                <span className=" text-2xl" >Login</span>
+            </NavLink>
+
+        </li>
+
 
     </>
 
@@ -68,7 +91,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                 <img className=" w-32 h-32" src="https://i.ibb.co/6R4sfpq/4458381-74.jpg" alt="" />
+                <img className=" w-32 h-32" src="https://i.ibb.co/6R4sfpq/4458381-74.jpg" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -77,9 +100,20 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
+   
+                <div className=" navbar-end" >
+                {
+                    user ?
+                    <button onClick={ handleSingOut} className=" btn" > Sign Out </button>
+                    :
+                  
+                 <Link to='/login' > <button className=" btn" > Login </button> </Link>
+             
+
+                }
+                </div>
+
+            
         </div>
 
 
