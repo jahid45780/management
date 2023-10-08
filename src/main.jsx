@@ -13,6 +13,10 @@ import Blog from './Components/Home/Blog';
 import Login from './Components/Login/Login';
 import Register from './Components/Login/Resister/Register';
 import AuthProviders from './Components/Providers/AuthProviders';
+import EventDetails from './Components/EventCard/EventDetails';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ServicePrice from './Components/PrivateRoute/ServicePrice';
+import Contact from './Components/PrivateRoute/Contact';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +27,19 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:()=> fetch('marry.json')
+        loader:()=> fetch('/marry.json')
+      },
+      {
+          path: '/marry/:id',
+          element: <PrivateRoute> <EventDetails></EventDetails> </PrivateRoute> 
+      },
+      {
+         path:'/service',
+         element:  <ServicePrice></ServicePrice> 
+      },
+      {
+        path:'/contact',
+        element:  <Contact></Contact> 
       },
       {
         path:'/about',
