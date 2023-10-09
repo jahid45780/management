@@ -6,7 +6,7 @@ const About = () => {
        <section className=" m-4" >
    <h2 className=" text-7xl text-center font-bold text-indigo-900 mt-8" > Meet Our Team__ </h2>
 
-<div className=" grid grid-cols-1 md:grid-cols-2 mt-7 lg:grid-cols-3 gap-3" >
+<div data-aos="zoom-in" className=" grid grid-cols-1 md:grid-cols-2 mt-7 lg:grid-cols-3 gap-3" >
             <div className="card card-compact  bg-base-100 shadow-xl">
   <figure><img  className=" w-full h-80 rounded-lg" src="https://i.ibb.co/TLbPXHc/Snapchat-1696534044.jpg" alt="Shoes" /></figure>
   <div className="card-body ">

@@ -2,7 +2,7 @@
 
 const ExtraSections = () => {
     return (
-        <div >
+        <div  data-aos="fade-left">
             <h2 className=" text-center text-5xl font-bold  mt-4 mb-4" > Some Of Our Best Management Programs </h2>
             {/* sections 1 */}
             <div className="carousel w-full">

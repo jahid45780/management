@@ -4,9 +4,11 @@ const ServicePrice = () => {
     return (
     <section className=" m-3">
 
-<div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
+<div  className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
            
-           <div className="card bg-base-100 shadow-xl">
+           <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="card bg-base-100 shadow-xl">
   <figure >
     <img  src="https://i.ibb.co/jyJz04K/restaurant-hall-with-turquoise-chairs-navy-coloured-ceiling-classic-chandeliers-white-walls.jpg" alt="Shoes" className="rounded-xl h-96 w-full " />
   </figure>
@@ -20,7 +22,9 @@ const ServicePrice = () => {
 </div>
 
 
-<div className="card bg-base-100 shadow-xl">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="card bg-base-100 shadow-xl">
   <figure >
     <img  src="https://i.ibb.co/TTZWC0T/exquisite-decoration-wedding-restaurant.jpg" alt="Shoes" className="rounded-xl h-96 w-full " />
   </figure>
@@ -34,7 +38,9 @@ const ServicePrice = () => {
 </div>
 
 
-<div className="card bg-base-100 shadow-xl">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="card bg-base-100 shadow-xl">
   <figure >
     <img  src="https://i.ibb.co/XpL3vjJ/beautiful-christmas-interior-decoration.jpg" alt="Shoes" className="rounded-xl h-96 w-full " />
   </figure>
@@ -48,7 +54,9 @@ const ServicePrice = () => {
 </div>
 
 
-<div className="card bg-base-100 shadow-xl">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="card bg-base-100 shadow-xl">
   <figure >
     <img  src="https://i.ibb.co/JvfzxhK/banquet-manager-setting-table-event.jpg" alt="Shoes" className="rounded-xl h-96 w-full " />
   </figure>
@@ -62,7 +70,9 @@ const ServicePrice = () => {
 </div>
 
 
-<div className="card bg-base-100 shadow-xl">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="card bg-base-100 shadow-xl">
   <figure >
     <img  src="https://i.ibb.co/877RhKS/people-preparing-photo-shooting.jpg" alt="Shoes" className="rounded-xl h-96 w-full " />
   </figure>
@@ -76,7 +86,9 @@ const ServicePrice = () => {
 </div>
 
 
-<div className="card bg-base-100 shadow-xl">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="card bg-base-100 shadow-xl">
   <figure >
     <img  src="https://i.ibb.co/DKTGDJ6/swan-towel-bed-with-red-rose-flower-petals.jpg" alt="Shoes" className="rounded-xl h-96 w-full " />
   </figure>

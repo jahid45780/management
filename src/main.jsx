@@ -32,11 +32,13 @@ const router = createBrowserRouter([
       },
       {
           path: '/marry/:id',
-          element: <PrivateRoute> <EventDetails></EventDetails> </PrivateRoute> 
+          element: <PrivateRoute> <EventDetails></EventDetails> </PrivateRoute> ,
+          loader:()=>fetch('/marry.json')
       },
       {
          path:'/service',
          element:   <PrivateRoute> <ServicePrice></ServicePrice> </PrivateRoute> 
+        
       },
       {
         path:'/contact',

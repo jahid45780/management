@@ -1,9 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../ExtraSections/Footer";
+import { useEffect } from "react";
+import Aos from "aos";
 
 
 const Root = () => {
+    useEffect(()=>{
+        Aos.init();  
+    },[])
     return (
         <div className=" max-w-7xl mx-auto" >
             <Navbar></Navbar>

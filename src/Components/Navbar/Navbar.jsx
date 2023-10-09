@@ -1,16 +1,40 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
+import Swal from "sweetalert2";
+
+
 
 
 
 
 const Navbar = () => {
+    const [User, setUser] = useState(null)
+    const auth = getAuth(app)
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                setUser(user)
+
+            })
+            .catch(error => {
+                console.error(error.message)
+            })
+    }
 
     const { user, logOut } = useContext(AuthContext)
     const handleSingOut = () => {
         logOut()
-            .then()
+            .then(result => {
+                console.log(result)
+                Swal.fire('LogOut Successfully')
+            })
             .catch()
     }
 
@@ -72,7 +96,7 @@ const Navbar = () => {
                 <span className=" text-2xl" > Service Price </span>
             </NavLink>
 
-        </li> 
+        </li>
 
 
         <li>
@@ -86,7 +110,7 @@ const Navbar = () => {
                 <span className=" text-2xl" > Contact Us </span>
             </NavLink>
 
-        </li> 
+        </li>
 
 
         <li>
@@ -141,7 +165,24 @@ const Navbar = () => {
 
 
                 }
+
+                {user &&
+                    <div className=" flex gap-1" >
+
+                        <div className="  border-green-700 ml-3" >  <h2> {User?.displayName} </h2>
+                            <img className=" w-10 h-10 rounded-full" src={User?.photoURL} alt="" />
+                        </div>
+
+                    </div>
+
+                }
+
+                <div><button onClick={handleGoogleSignIn} className=" btn ml-3" > Login With Google </button></div>
+
+
             </div>
+
+
 
 
         </div>

@@ -4,7 +4,9 @@ import { AiFillDollarCircle } from "react-icons/ai";
 const EventCard = ({ card }) => {
     const { id,logo, event_title, price, location, event_description } = card;
     return (
-        <div>
+        <div  data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
 
             <img className=" w-96 h-72" src={logo} alt="" />
             <h2 className=" text-2xl font-bold" > {event_title} </h2>
