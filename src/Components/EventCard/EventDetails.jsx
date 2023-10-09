@@ -34,7 +34,7 @@ const EventDetails = () => {
         <img className=" w-20 h-20 rounded-full" src={image_url} alt="" />
        <p className=" font-bold text-xl" > {title_name} </p>
        </div>
-
+     
        <div className=" flex gap-3" >
         <p className=" flex gap-1 items-center font-bold text-xl" > <AiFillEnvironment></AiFillEnvironment> {location} </p>
         <p className="flex gap-1 items-center font-bold text-xl" > <AiFillDollarCircle></AiFillDollarCircle> {price} </p>
