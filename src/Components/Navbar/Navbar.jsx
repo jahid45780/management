@@ -170,7 +170,7 @@ const Navbar = () => {
                     <div className=" flex gap-1" >
 
                         <div className="  border-green-700 ml-3" >  <h2> {User?.displayName} </h2>
-                            <img className=" w-10 h-10 rounded-full" src={User?.photoURL} alt="" />
+                            <img className="  rounded-full" src={User?.photoURL} alt="" />
                         </div>
 
                     </div>
@@ -180,7 +180,7 @@ const Navbar = () => {
                 <div><button onClick={handleGoogleSignIn} className=" btn ml-3" > Login With Google </button></div>
 
 
-            </div>
+            </div> 
 
 
 

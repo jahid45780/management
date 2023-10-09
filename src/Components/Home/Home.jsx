@@ -5,6 +5,8 @@ import ExtraSections from "../ExtraSections/ExtraSections";
 
 
 
+
+
 const Home = () => {
     const cards = useLoaderData()
     console.log(cards)
@@ -24,7 +26,7 @@ const Home = () => {
            </div>
 
            <ExtraSections></ExtraSections>
-           {/* <Footer></Footer> */}
+    
            
         </div>
     );

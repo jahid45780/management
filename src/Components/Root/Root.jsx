@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../ExtraSections/Footer";
 import { useEffect } from "react";
 import Aos from "aos";
+import Footer from "../Footer/Footer";
+
 
 
 const Root = () => {
@@ -14,6 +15,8 @@ const Root = () => {
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
+            
+        
         </div>
     );
 };
